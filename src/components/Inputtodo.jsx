@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import '../App.css'
 
 function InputTodo({ item, onEdit, onDelete, onToggle }) {
-    const[checked, setChecked]= useState(false);
     
     const handleCheckboxChange = () => {
         onToggle(item.id);
@@ -9,7 +9,7 @@ function InputTodo({ item, onEdit, onDelete, onToggle }) {
 
     return (
         <>
-             <td>  <input 
+             <td>  <input
                 type='checkbox' 
                 checked={item.completed} 
                 onChange={handleCheckboxChange}

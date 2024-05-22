@@ -133,11 +133,11 @@ export default function Todo() {
                     onChange={(e) => setTodo({ ...todo, date: e.target.value })}
                 />
                 <br />
-                <textarea value={todo.details} onChange={(e) => setTodo({ ...todo, details: e.target.value })}>
+                <textarea placeholder="Describe" value={todo.details}  onChange={(e) => setTodo({ ...todo, details: e.target.value })}>
                     Description
                 </textarea>
                 <br />
-                <select value={todo.priority} onChange={(e) => setTodo({ ...todo, priority: e.target.value })}>
+                <select className={`mySelect ${todo.priority}`} value={todo.priority} onChange={(e) => setTodo({ ...todo, priority: e.target.value })}>
                     <option value="low">Low</option>
                     <option value="mid">Mid</option>
                     <option value="high">High</option>
@@ -156,11 +156,10 @@ export default function Todo() {
                     </tr>
                 </thead>
                 <tbody>
-                    {todos.map((item, index) => (
-                        <tr key={index}>
+                    {todos.map((item) => (
+                        <tr key={item.id} className={`${item.completed ?'taskCompleted':''}`}>
                             <InputTodo
                                 item={item}
-                                // index={item.id}
                                 onEdit={handleEdit}
                                 onDelete={handleDelete}
                                 onToggle={handleToggle}
