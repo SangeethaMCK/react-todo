@@ -57,6 +57,18 @@ app.post('/todos', async (req, res) => {
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
+app.delete("/todos", async (req, res) => {
+  try {
+
+    await client.query(`truncate todos `);
+
+    res.json({ message: "All Todo deleted successfully" });
+  }
+  catch (error) {
+    console.error("Error deleting todo:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 
 app.delete("/todos/:id", async (req, res) => {
   try {

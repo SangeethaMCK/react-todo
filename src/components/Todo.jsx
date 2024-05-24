@@ -114,7 +114,27 @@ export default function Todo() {
         setEditId(id);
         setTodo(editTodo);
     };
+    async function delAll(){
+        setTodos([]);
+        try {
+            await fetch(localhostAddress, {
+              method: "DELETE",
+              mode: "cors",
+            });
+          } catch (error) {
+            console.error(error);
+          }
 
+    }
+    const dateSort = () => {
+        const sortedTodos = [...todos].sort((a, b) => new Date(a.date) - new Date(b.date));
+        setTodos(sortedTodos);
+      };
+      const prioritySort = () => {
+        const priorityOrder = { "low": 3, "mid": 2, "high": 1 };
+        const sortedTodos = [...todos].sort((a, b) => priorityOrder[a.priority] - priorityOrder[b.priority]);
+        setTodos(sortedTodos);
+    };
     return (
         <>
             <h1>TODO-APP</h1>
@@ -137,13 +157,17 @@ export default function Todo() {
                     Description
                 </textarea>
                 <br />
-                <select className={`mySelect ${todo.priority}`} value={todo.priority} onChange={(e) => setTodo({ ...todo, priority: e.target.value })}>
+
+                <select className={`mySelect ${todo.priority}`}  value={todo.priority} onChange={(e) => setTodo({ ...todo, priority: e.target.value })}>
+                    <option disabled>Select your Priority</option>
                     <option value="low">Low</option>
                     <option value="mid">Mid</option>
                     <option value="high">High</option>
                 </select>
                 <button className='button-add' type="submit">ADD</button>
             </form>
+            <button className='dateSort' onClick={dateSort}>Sort -Date</button>
+            <button className='prioritySort' onClick={prioritySort}>Sort- Priority</button>
             <table>
                 <thead>
                     <tr>
@@ -152,6 +176,8 @@ export default function Todo() {
                         <th>Date</th>
                         <th>Details</th>
                         <th>Priority</th>
+                        <th></th>
+                        <th><button className='button-del' onClick={delAll}>Del All</button></th>
                         
                     </tr>
                 </thead>

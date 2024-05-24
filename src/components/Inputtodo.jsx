@@ -19,7 +19,7 @@ function InputTodo({ item, onEdit, onDelete, onToggle }) {
             <td>{item.details}</td>
             <td>{item.priority}</td>
             <td><button className='button-edit' onClick={() => onEdit(item.id)}>EDIT</button></td>
-            <td><button className='button-del' onClick={() => onDelete(item.id)}>DEL</button></td>
+            <td><button className='button-del' onClick={() => onDelete(item.id)}>DELETE</button></td>
             </>
     );
 }

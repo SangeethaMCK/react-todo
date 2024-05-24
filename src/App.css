@@ -30,50 +30,42 @@ input, textarea, select {
     border-color: #ffffff; 
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
   }
-.button-add {
-    background-color: rgb(83, 240, 83); 
+ button {
     border: none;
     color: white;
-    padding: 5px 20px;
+    padding: 5px 15px;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    /* display: inline-block; */
     font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 30px;
+    margin:2px;
+  }
+  
+  .button-add {
+    background-color: rgb(83, 240, 83);
+    width: 50%;
     margin: 4px 25%;
-    cursor: pointer;
-    border-radius: 10px;
-    height: 30px;
-    width: 50%; 
   }
-
+  
   .button-del {
-    background-color:#f53535;
-    border: none;
-    color: white;
-    padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    /* margin: 4px 1px; */
-    cursor: pointer;
-    border-radius: 10px;
-    height: 30px;
+    background-color: #f53535;
   }
-  .button-edit{
-    background-color:#3588f5;
-    border: none;
-    color: white;
-    padding: 5px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    /* margin: 4px 1px; */
-    cursor: pointer;
-    border-radius: 10px;
-    height: 30px;
+  
+  .button-edit {
+    background-color: #3588f5;
   }
+  .dateSort,
+  .prioritySort{
+    background-color:rgb(165, 127, 168);
+    width: 40%;
+  }
+  .sort{
+    display:flex;
+    margin: auto;
+  }
+  
   button:hover{
     outline: none;
     border-color: #ffffff; 
