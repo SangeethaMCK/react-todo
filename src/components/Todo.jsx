@@ -81,6 +81,9 @@ export default function Todo() {
             await fetch(`${localhostAddress}/${id}`, {
               method: "DELETE",
               mode: "cors",
+              headers: {
+                'Content-Type': 'application/json'
+              }
             });
           } catch (error) {
             console.error(error);
@@ -166,8 +169,11 @@ export default function Todo() {
                 </select>
                 <button className='button-add' type="submit">ADD</button>
             </form>
+            <div className="sort">
             <button className='dateSort' onClick={dateSort}>Sort -Date</button>
             <button className='prioritySort' onClick={prioritySort}>Sort- Priority</button>
+            </div>
+            
             <table>
                 <thead>
                     <tr>

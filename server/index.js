@@ -5,15 +5,15 @@ import express from 'express';
 import cors from 'cors';
 
 const app = express();
-const port = 3000;
+const port = 8080;
 app.use(cors())
 
 const client = new Client({
-  user: 'postgres',
-  password: 'Sangee@2001',
-  host: 'localhost', 
+  user: process.env.user,
+  password: process.env.password,
+  host: process.env.host,
   port: 5432,
-  database: 'postgres'
+  database: "postgres",
 });
 
 client.connect()

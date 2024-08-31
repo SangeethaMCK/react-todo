@@ -1,102 +1,128 @@
-*{
-    margin: auto;
-    background-color: #242424;
-}
-input, textarea, select {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 16px;
-    margin : 3px
-  }
-  h1{
-    text-align: center;
-  }
-  
-  input:focus {
-    outline: none;
-    border-color: #ffffff; 
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
-  }
-  textarea:focus{
-    outline: none;
-    border-color: #ffffff; 
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
-  }
-  select:focus{
-    outline: none;
-    border-color: #ffffff; 
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
-  }
- button {
-    border: none;
-    color: white;
-    padding: 5px 15px;
-    text-align: center;
-    /* display: inline-block; */
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    height: 30px;
-    margin:2px;
-  }
-  
-  .button-add {
-    background-color: rgb(83, 240, 83);
-    width: 50%;
-    margin: 4px 25%;
-  }
-  
-  .button-del {
-    background-color: #f53535;
-  }
-  
-  .button-edit {
-    background-color: #3588f5;
-  }
-  .dateSort,
-  .prioritySort{
-    background-color:rgb(165, 127, 168);
-    width: 40%;
-  }
-  .sort{
-    display:flex;
-    margin: auto;
-  }
-  
-  button:hover{
-    outline: none;
-    border-color: #ffffff; 
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
-  }
-  table{
-    padding: 10px;
-    width: 100%;
-    font-size: 16px;
-    margin : 10px
-  }
-th, td{
-    padding: 2px 5px;
+* {
+  margin: auto;
+  background-color: #242424;
 }
 
-.mySelect.low{
-  outline: none;
-  border-color: rgb(253, 57, 57); 
-  box-shadow: 0 0 5px rgb(253, 57, 57, 0.5); 
+input,
+textarea,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 16px;
+  margin: 3px;
 }
 
-.mySelect.mid{
-  outline: none;
-  border-color: yellow; 
-  box-shadow: 0 0 5px rgba(251, 255, 0, 0.5); 
+h1 {
+  text-align: center;
 }
-.mySelect.high{
+
+input:focus {
   outline: none;
-  border-color: rgb(30, 255, 0); 
-  box-shadow: 0 0 5px rgba(123, 255, 0, 0.5); 
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
-.taskCompleted{
+
+textarea:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+select:focus {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+button {
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 30px;
+  margin: 2px;
+}
+
+.button-add {
+  background-color: rgb(83, 240, 83);
+  width: 50%;
+  margin: 4px 25%;
+}
+
+.button-del {
+  background-color: #f53535;
+}
+.del-icon {
+  color: white;
+  background-color: #f53535;
+}
+.button-edit {
+  background-color: #3588f5;
+}
+.edit-icon {
+  color: white;
+  background-color: #3588f5;
+}
+.sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.dateSort,
+.prioritySort {
+  background-color: rgb(165, 127, 168);
+  width: 40%;
+}
+
+button:hover {
+  outline: none;
+  border-color: #ffffff;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.281);
+}
+
+table {
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  margin: 10px;
+}
+
+th,
+td {
+  padding: 2px 5px;
+}
+
+/* .mySelect.low {
+  outline: none;
+  border-color: rgb(253, 57, 57);
+  box-shadow: 0 0 5px rgb(253, 57, 57, 0.5);
+}
+
+.mySelect.mid {
+  outline: none;
+  border-color: yellow;
+  box-shadow: 0 0 5px rgba(251, 255, 0, 0.5);
+}
+
+.mySelect.high {
+  outline: none;
+  border-color: rgb(30, 255, 0);
+  box-shadow: 0 0 5px rgba(123, 255, 0, 0.5);
+} */
+
+.taskCompleted {
   color: #6c6d6e;
+}
+
+.center{
+  text-align: center;
 }
